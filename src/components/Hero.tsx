@@ -119,16 +119,16 @@ const Hero = () => {
             className="flex flex-wrap justify-center sm:justify-start gap-6 sm:gap-8 mt-12"
           >
             <div className="text-center min-w-0">
-              <div className="text-2xl sm:text-3xl font-bold text-strategic-green">100+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-strategic-green">40+</div>
               <div className="text-xs sm:text-sm text-gray-400">Jogadas Vencedoras</div>
             </div>
             <div className="text-center min-w-0">
-              <div className="text-2xl sm:text-3xl font-bold text-strategic-green">50+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-strategic-green">25+</div>
               <div className="text-xs sm:text-sm text-gray-400">Reis Coroados</div>
             </div>
             <div className="text-center min-w-0">
               <div className="text-2xl sm:text-3xl font-bold text-strategic-green">24/7</div>
-              <div className="text-xs sm:text-sm text-gray-400">Proteção</div>
+              <div className="text-xs sm:text-sm text-gray-400">Suporte</div>
             </div>
           </motion.div>
         </motion.div>
