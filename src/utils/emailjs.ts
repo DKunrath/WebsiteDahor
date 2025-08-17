@@ -7,18 +7,10 @@ export const EMAILJS_CONFIG = {
   PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key_here'
 }
 
-// Debug das configurações (remover em produção)
-console.log('EmailJS Config:', {
-  SERVICE_ID: EMAILJS_CONFIG.SERVICE_ID,
-  TEMPLATE_ID: EMAILJS_CONFIG.TEMPLATE_ID,
-  PUBLIC_KEY: EMAILJS_CONFIG.PUBLIC_KEY ? 'SET' : 'NOT SET'
-})
-
 // Inicializar EmailJS
 export const initEmailJS = () => {
   try {
     emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY)
-    console.log('EmailJS inicializado com sucesso')
   } catch (error) {
     console.error('Erro ao inicializar EmailJS:', error)
   }
@@ -27,7 +19,6 @@ export const initEmailJS = () => {
 // Função para enviar email
 export const sendEmail = async (formData: any) => {
   try {
-    console.log('Enviando email com dados:', formData)
     
     const templateParams = {
       from_name: formData.name,
@@ -41,13 +32,6 @@ export const sendEmail = async (formData: any) => {
       reply_to: formData.email
     }
 
-    console.log('Template params:', templateParams)
-    console.log('Usando credenciais:', {
-      SERVICE_ID: EMAILJS_CONFIG.SERVICE_ID,
-      TEMPLATE_ID: EMAILJS_CONFIG.TEMPLATE_ID,
-      PUBLIC_KEY: EMAILJS_CONFIG.PUBLIC_KEY ? 'SET' : 'NOT SET'
-    })
-
     const result = await emailjs.send(
       EMAILJS_CONFIG.SERVICE_ID,
       EMAILJS_CONFIG.TEMPLATE_ID,
@@ -55,7 +39,6 @@ export const sendEmail = async (formData: any) => {
       EMAILJS_CONFIG.PUBLIC_KEY
     )
     
-    console.log('Email enviado com sucesso:', result)
     return result
   } catch (error) {
     console.error('Erro detalhado ao enviar email:', error)
