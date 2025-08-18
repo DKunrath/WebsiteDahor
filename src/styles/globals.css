@@ -127,6 +127,24 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Safari iOS fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific styles */
+  .glass {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
 /* Gradient text */
 .gradient-text {
   background: linear-gradient(135deg, #81b64c, #a3d160);
@@ -257,5 +275,47 @@ html, body {
   button, a {
     min-height: 44px;
     min-width: 44px;
+  }
+}
+
+/* Additional Safari iOS fixes for form inputs and cards */
+@supports (-webkit-touch-callout: none) {
+  /* Force dark backgrounds on iOS Safari */
+  input, textarea, select {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  /* Fix for glass cards on iOS */
+  .glass, .glass-dark {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+  }
+  
+  /* Ensure text is white in glass elements */
+  .glass *, .glass-dark * {
+    color: white !important;
+  }
+  
+  /* Fix for specific elements that might become gray */
+  .glass .text-white, 
+  .glass-dark .text-white,
+  .glass .text-gray-300,
+  .glass-dark .text-gray-300,
+  .glass .text-strategic-green,
+  .glass-dark .text-strategic-green {
+    color: white !important;
+  }
+  
+  .glass .text-strategic-green,
+  .glass-dark .text-strategic-green {
+    color: #81b64c !important;
   }
 }

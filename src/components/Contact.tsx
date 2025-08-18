@@ -207,6 +207,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 glass-dark rounded-xl border border-white/10 focus:border-primary-light/50 focus:outline-none text-white placeholder-gray-400 transition-colors"
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                          color: 'white',
+                          WebkitAppearance: 'none',
+                          appearance: 'none'
+                        }}
                         placeholder="Seu nome completo"
                       />
                     </div>
@@ -222,6 +228,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 glass-dark rounded-xl border border-white/10 focus:border-primary-light/50 focus:outline-none text-white placeholder-gray-400 transition-colors"
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                          color: 'white',
+                          WebkitAppearance: 'none',
+                          appearance: 'none'
+                        }}
                         placeholder="seu@email.com"
                       />
                     </div>
@@ -238,6 +250,12 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 glass-dark rounded-xl border border-white/10 focus:border-primary-light/50 focus:outline-none text-white placeholder-gray-400 transition-colors"
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                          color: 'white',
+                          WebkitAppearance: 'none',
+                          appearance: 'none'
+                        }}
                         placeholder="(51) 99999-9999"
                       />
                     </div>
@@ -252,6 +270,12 @@ const Contact = () => {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full px-4 py-3 glass-dark rounded-xl border border-white/10 focus:border-primary-light/50 focus:outline-none text-white placeholder-gray-400 transition-colors"
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                          color: 'white',
+                          WebkitAppearance: 'none',
+                          appearance: 'none'
+                        }}
                         placeholder="Nome da empresa"
                       />
                     </div>
@@ -267,6 +291,12 @@ const Contact = () => {
                         value={formData.service}
                         onChange={handleChange}
                         className="w-full px-4 py-3 glass-dark rounded-xl border border-white/10 focus:border-primary-light/50 focus:outline-none text-white bg-transparent"
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                          color: 'white',
+                          WebkitAppearance: 'none',
+                          appearance: 'none'
+                        }}
                       >
                         <option value="" className="bg-gray-800">Selecione um serviço</option>
                         {services.map((service) => (
@@ -286,6 +316,12 @@ const Contact = () => {
                         value={formData.budget}
                         onChange={handleChange}
                         className="w-full px-4 py-3 glass-dark rounded-xl border border-white/10 focus:border-primary-light/50 focus:outline-none text-white bg-transparent"
+                        style={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                          color: 'white',
+                          WebkitAppearance: 'none',
+                          appearance: 'none'
+                        }}
                       >
                         <option value="" className="bg-gray-800">Selecione uma faixa</option>
                         {budgets.map((budget) => (
@@ -308,6 +344,12 @@ const Contact = () => {
                       required
                       rows={5}
                       className="w-full px-4 py-3 glass-dark rounded-xl border border-white/10 focus:border-primary-light/50 focus:outline-none text-white placeholder-gray-400 transition-colors resize-none"
+                      style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        color: 'white',
+                        WebkitAppearance: 'none',
+                        appearance: 'none'
+                      }}
                       placeholder="Descreva seu projeto e objetivos..."
                     />
                   </div>
@@ -392,6 +434,7 @@ const Contact = () => {
                   whileHover={{ scale: 1.02, x: 5 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full glass-dark p-4 rounded-xl border border-white/10 hover:border-primary-light/50 text-left transition-all duration-300 group block"
+                  style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}
                 >
                   <div className="flex items-center gap-3">
                     <Calendar className="text-primary-light group-hover:text-white transition-colors" size={20} />
@@ -407,6 +450,7 @@ const Contact = () => {
                   whileHover={{ scale: 1.02, x: 5 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full glass-dark p-4 rounded-xl border border-white/10 hover:border-primary-light/50 text-left transition-all duration-300 group block md:hidden"
+                  style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}
                 >
                   <div className="flex items-center gap-3">
                     <Phone className="text-primary-light group-hover:text-white transition-colors" size={20} />

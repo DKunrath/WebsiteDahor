@@ -118,7 +118,8 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="glass rounded-3xl p-8 border border-white/10 relative overflow-hidden">
+            <div className="glass rounded-3xl p-8 border border-white/10 relative overflow-hidden bg-black/60 backdrop-blur-sm"
+                 style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', color: 'white' }}>
               {/* Background decoration */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-light/10 to-transparent rounded-full blur-3xl" />
               <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-primary-dark/10 to-transparent rounded-full blur-3xl" />
@@ -137,7 +138,11 @@ const About = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       whileHover={{ scale: 1.05 }}
-                      className="text-center p-6 glass-dark rounded-2xl border border-white/5"
+                      className="text-center p-6 glass-dark rounded-2xl border border-white/5 bg-black/80 backdrop-blur-sm"
+                      style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        color: 'white'
+                      }}
                     >
                       <motion.div
                         initial={{ opacity: 0 }}
