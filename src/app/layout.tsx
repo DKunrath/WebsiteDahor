@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import '../styles/globals.css'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import SourceProtection from '@/components/SourceProtection'
+import AntiDebugger from '@/components/AntiDebugger'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,6 +39,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
+        <AntiDebugger />
+        <SourceProtection />
         {children}
         <WhatsAppButton />
       </body>
